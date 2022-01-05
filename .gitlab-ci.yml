@@ -3,7 +3,6 @@ image: git.dti.crosemont.quebec:5050/progression/publication:latest
 # Production de la documentation
 .doc: &doc
   script:
-  - mkdir public
   - bash publish.sh .
   - mv /tmp/public/* public/
 
