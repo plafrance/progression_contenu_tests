@@ -1,0 +1,17 @@
+type: prog
+
+titre: test de zones visibles
+
+description: test de zones visibles
+
+énoncé: Tests de zones visibles <script>alert("test XSS")</script>
+
+ébauches:
+  défaut: !include exec.py
+  simple: !include exec_1.py
+  simple_sans_tag_début: !include exec_1.1.py
+  simple_sans_tag_fin: !include exec_1.2.py
+  double: !include exec_2.py
+  complexe: !include exec_complexe.py
+
+tests: !include tests.yml

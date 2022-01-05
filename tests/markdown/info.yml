@@ -1,0 +1,47 @@
+type: prog
+
+titre: Test de markdown complexe
+
+énoncé: |
+    _Ceci est en italique_
+    **Ceci est en gras**
+    **_Ceci est en gras italique_**
+    
+    Ceci est un code en Python:
+
+    ```python
+    def incrémenter(valeur):
+        return valeur + 1
+    
+    
+    entrée = input()
+    ```
+
+    Ceci est un code en Java:
+
+    ```java
+    public class exec {
+    
+        public int incrementer( int valeur ) {
+            return valeur + 1;
+        }
+    
+        public static void main( String[] args ) {
+            Scanner scan = new Scanner( System.in );
+    
+            int entrée = scan.nextInt();
+    
+        }
+    
+    }
+    ```
+
+
+
+ébauches:
+  python: test
+
+tests:
+ - nom: test
+   entrée: test
+   sortie: test

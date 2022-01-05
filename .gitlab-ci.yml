@@ -1,0 +1,63 @@
+image: git.dti.crosemont.quebec:5050/progression/publication:latest 
+
+variables:
+  GIT_STRATEGY: none
+
+.clone_master: &clone_master
+  git clone --depth=1 -b master https://gitlab-ci-token:${CI_JOB_TOKEN}@git.dti.crosemont.quebec/progression/progression_contenu_demo.git master
+
+.clone_dev: &clone_dev
+  git clone --depth=1 -b $CI_COMMIT_REF_NAME https://gitlab-ci-token:${CI_JOB_TOKEN}@git.dti.crosemont.quebec/progression/progression_contenu_demo.git dev
+
+# Production de la documentation
+.doc: &doc_master
+  script:
+  - *clone_master
+  - mkdir public
+  - bash master/publish.sh $PWD/master
+  - mv /tmp/public/* public/
+
+.doc: &doc_dev
+  script:
+  - *clone_dev
+  - mkdir public
+  - bash dev/publish.sh $PWD/dev
+  - mv /tmp/public/ public_dev
+
+tests:
+  stage: test
+  script:
+  - *clone_master
+  - find $PWD/master/questions -type f -name info.yml -print -exec bash -c "python3 -m progression_qc {} >/dev/null" \;
+  only:
+  - master
+
+pages_master:
+  stage: doc
+  <<: *doc_master
+  artifacts:
+    paths:
+    - public
+
+pages_dev:
+  stage: doc
+  <<: *doc_dev
+  except:
+    - master
+  artifacts:
+    paths:
+    - public_dev
+
+pages:
+  stage: publication
+  script:
+  - mv public_dev public/dev || true
+  artifacts:
+    paths:
+    - public
+
+stages:
+  - clone
+  - test
+  - doc
+  - publication

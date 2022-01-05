@@ -1,0 +1,32 @@
+.urlcache{
+	height:0; visibility: hidden
+}
+
+.urlvisible{
+	font-size: 60%; visibility: visible
+}
+
+.copy {
+	position: relative;
+	top: -60px;
+}
+
+a.likeAButton {
+	color:#fff;
+	padding:3px 3px 3px 3px;
+	margin:1px;
+	text-decoration:none;
+}
+a.likeAButton:hover {
+  color:#fcffdf;
+  padding:3px 3px 3px 3px;
+  margin:1px;
+  text-decoration:none;
+}
+a.likeAButton:active {
+	color:#e0ffaf;
+	padding:4px 2px 2px 4px;
+	margin:1px;
+	text-decoration:none;
+}
+

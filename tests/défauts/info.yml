@@ -1,0 +1,7 @@
+type: prog
+
+ébauches:
+  python: test
+
+tests:
+  - sortie:
