@@ -122,8 +122,8 @@ dir="$1"
 mkdir /tmp/q /tmp/public
 cp $dir/public/questions.css /tmp/public
 
-entête "$dir/tests" "Questions de tests" > /tmp/public/questions_de_tests.org
-chercher "$dir/tests" 1 >> /tmp/public/questions_de_tests.org
+entête "$dir/questions" "Questions de tests" > /tmp/public/questions_de_tests.org
+chercher "$dir/questions" 1 >> /tmp/public/questions_de_tests.org
 emacs --batch --load $HOME/.emacs.el --load $dir/publish.el --funcall org-publish-all
 mv /tmp/q/* /tmp/public/
 rm -rf /tmp/q
