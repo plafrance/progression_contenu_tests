@@ -10,7 +10,7 @@ image: git.dti.crosemont.quebec:5050/progression/publication:latest
 tests:
   stage: test
   script:
-  - find questions/ -type f -name info.yml -print -exec bash -c "python3 -m progression_qc {} >/dev/null" \;
+  - find tests/ -type f -name info.yml -print -exec bash -c "python3 -m progression_qc {} >/dev/null" \;
 
 pages:
   <<: *doc
