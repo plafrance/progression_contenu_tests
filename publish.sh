@@ -124,7 +124,7 @@ export -f entête
 dir="$1"
 
 mkdir /tmp/q /tmp/public
-cp $dir/public/questions.css /tmp/public
+cp $dir/public/* /tmp/public
 
 # Production de la liste de questions
 entête "$dir/questions" "$(get_titre $dir/questions/contenu.txt)" > /tmp/public/liste_questions.org
