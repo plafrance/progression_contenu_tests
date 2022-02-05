@@ -38,12 +38,12 @@ créer_liens () {
 		uuid=$(dirname $1|md5sum|head -c 32)
 	fi
 
-	mkdir /tmp/q/$uuid
-	cp -r $(dirname $1)/* /tmp/q/$uuid
-
 	# Remplacement des variables
 	gawk -i inplace "{gsub(/[$]BASE_URL/, \"$CI_PAGES_URL\");}1" $1
 	gawk -i inplace "{gsub(/[$]PATH/, \"$uuid\");}1" $1
+
+	mkdir /tmp/q/$uuid
+	cp -r $(dirname $1)/* /tmp/q/$uuid
 
     URL=$CI_PAGES_URL/$uuid/info.yml
 	URL_B64=$(echo -n $URL | base64 -w0 | sed "s/=*$//")
