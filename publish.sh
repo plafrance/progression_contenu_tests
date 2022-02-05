@@ -40,7 +40,11 @@ créer_liens () {
 
 	mkdir /tmp/q/$uuid
 	cp -r $(dirname $1)/* /tmp/q/$uuid
-	   
+
+	# Remplacement des variables
+	gawk -i inplace "{gsub(/[$]BASE_URL/, \"$CI_PAGES_URL\");}1" $1
+	gawk -i inplace "{gsub(/[$]PATH/, \"$uuid\");}1" $1
+
     URL=$CI_PAGES_URL/$uuid/info.yml
 	URL_B64=$(echo -n $URL | base64 -w0 | sed "s/=*$//")
 
@@ -131,12 +135,6 @@ done
 
 # Exportation en HTML
 emacs --batch --load $HOME/.emacs.el --load $dir/publish.el --funcall org-publish-all
-
-# Remplacement des variables
-cd /tmp/q/
-find . -name info.yml -exec gawk -i inplace "{gsub(/[$]BASE_URL/, \"$CI_PAGES_URL\");}1" {} \;
-find . -name info.yml -exec gawk -i inplace "{gsub(/[$]PATH/, \"$(dirname {})\");}1" {} \;
-
 
 mv /tmp/q/* /tmp/public/
 rm -rf /tmp/q
