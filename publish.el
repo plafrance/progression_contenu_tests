@@ -17,7 +17,7 @@
              :publishing-directory "/tmp/public"
              :exclude (regexp-opt '("README" "draft" "démo" "thème"))
              :auto-sitemap t
-             :sitemap-filename "/tmp/public/index.org"
+             :sitemap-filename "index.org"
              :sitemap-file-entry-format "%d *%t*"
              :html-head-extra "<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\"/>"
              :sitemap-style 'list
