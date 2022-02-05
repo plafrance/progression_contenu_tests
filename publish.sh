@@ -55,7 +55,7 @@ créer_liens () {
 	
     #bash -c "printf '*%.0s' {1..$(( $2 + 1 ))}"
 	echo "@@html:<details><summary>@@"
-	echo "[[$URL_PROGRESSION/?uri=$URL_B64#/question][$titre]] $niveau"
+	echo "[[$URL_PROGRESSION/question?uri=$URL_B64][$titre]] $niveau"
 	echo "@@html:</summary>@@"
 	echo " {{{voir($URL)}}}"
 	echo " #+begin_quote"
@@ -122,8 +122,21 @@ dir="$1"
 mkdir /tmp/q /tmp/public
 cp $dir/public/questions.css /tmp/public
 
-entête "$dir/questions" "Questions de tests" > /tmp/public/questions_de_tests.org
-chercher "$dir/questions" 1 >> /tmp/public/questions_de_tests.org
+# Production de la liste de questions
+entête "$dir/questions" "$(get_titre $dir/questions/contenu.txt)" > /tmp/public/liste_questions.org
+for d in $dir/questions/*
+do
+    chercher "$d" 1 >> /tmp/public/liste_questions.org
+done
+
+# Exportation en HTML
 emacs --batch --load $HOME/.emacs.el --load $dir/publish.el --funcall org-publish-all
+
+# Remplacement des variables
+cd /tmp/q/
+find . -name info.yml -exec gawk -i inplace "{gsub(/[$]BASE_URL/, \"$CI_PAGES_URL\");}1" {} \;
+find . -name info.yml -exec gawk -i inplace "{gsub(/[$]PATH/, \"$(dirname {})\");}1" {} \;
+
+
 mv /tmp/q/* /tmp/public/
 rm -rf /tmp/q

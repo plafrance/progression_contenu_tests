@@ -35,7 +35,8 @@ titre: Test de markdown complexe
     
     }
     ```
-
+    Et voici une image :
+    ![une image]($BASE_URL/$PATH/image.jpg)
 
 
 ébauches:
