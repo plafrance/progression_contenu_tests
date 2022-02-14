@@ -43,7 +43,7 @@ uuid: e9bbea6d-9ab1-4b95-9f30-7bdb821b9e2b
     # +TODO
 
 
-    print( ''Bonjour, je m''appelle Bob !'' )
+    print( "Bonjour, je m''appelle Bob !" )
 
 
 
