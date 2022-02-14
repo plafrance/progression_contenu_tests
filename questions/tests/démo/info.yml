@@ -30,7 +30,7 @@ tests:
     '
 titre: Bonjour Bob!
 type: prog
-uuid: 77142474-417e-427b-a5e8-08641be85ac7
+uuid: e9bbea6d-9ab1-4b95-9f30-7bdb821b9e2b
 ébauches:
   python: 'nom = ''Bob''
 
