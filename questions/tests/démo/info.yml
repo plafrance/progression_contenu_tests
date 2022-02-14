@@ -1,0 +1,102 @@
+auteur: Wafaa Niar Dinedane / Patrick Lafrance
+description: Sortie de message contenant du texte et une variable
+licence: © 2021 CC-BY-SA
+niveau: base
+rétroactions:
+  négative: vérifie comment composer une variable avec du texte dans un message, faire
+    attention aux espaces ..
+  positive: Bravo! tu as réussi à maitriser l'affichage d'une variable dans un message!
+tests:
+- entrée: 'Bob
+
+    '
+  nom: 'Sortie simple : Bob'
+  sortie: 'Bonjour, je m''appelle Bob !
+
+    '
+- entrée: 'Laura
+
+    '
+  nom: 'Sortie simple : Laura'
+  sortie: 'Bonjour, je m''appelle Laura !
+
+    '
+- entrée: 'Léon
+
+    '
+  nom: 'Sortie simple : Léon'
+  sortie: 'Bonjour, je m''appelle Léon !
+
+    '
+titre: Bonjour Bob!
+type: prog
+uuid: 77142474-417e-427b-a5e8-08641be85ac7
+ébauches:
+  python: 'nom = ''Bob''
+
+    #-VISIBLE
+
+    nom = input()
+
+    #+VISIBLE
+
+    # +TODO
+
+
+    print( ''Bonjour, je m''appelle Bob !'' )
+
+
+
+
+
+    '
+  java: 'import java.util.Scanner;
+
+
+    class exec {
+
+
+    public static void main( String args[] ){
+
+    // +VISIBLE
+
+    String nom = "Bob";
+
+    //-VISIBLE
+
+    Scanner scan = new Scanner( System.in );
+
+    nom = scan.nextLine();
+
+    //+VISIBLE
+
+    //+TODO
+
+
+    System.out.println( "Bonjour, je m''appelle !" );
+
+
+
+    // -TODO
+
+    // -VISIBLE
+
+    }
+
+    }
+
+    '
+énoncé: 'Compléter le code afin de produire le message en sortie selon ce modèle :
+  `Bonjour, je m''appelle Bob !`. Il est important d''utiliser la variable pour construire
+  le message et de respecter les espacements tels quels...
+
+
+  À faire :
+
+
+  Corriger les erreurs éventuelles dans le code et produire le message en sortie tel
+  que demandé.
+
+  '
+
+
