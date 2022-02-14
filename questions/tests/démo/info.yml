@@ -86,17 +86,38 @@ uuid: e9bbea6d-9ab1-4b95-9f30-7bdb821b9e2b
     }
 
     '
-énoncé: 'Compléter le code afin de produire le message en sortie selon ce modèle :
+énoncé: |
+  Compléter le code afin de produire le message en sortie selon ce modèle :
   `Bonjour, je m''appelle Bob !`. Il est important d''utiliser la variable pour construire
   le message et de respecter les espacements tels quels...
 
+  ### Entrées
 
-  À faire :
+  - `nom` : un nom à afficher (chaîne)
 
+  ### Sortie attendue
 
-  Corriger les erreurs éventuelles dans le code et produire le message en sortie tel
+  Le message "Bonjour, je m''appelle <nom> !"
+
+  où <nom> est remplacé par le nom reçu en entrée.
+
+  ### À faire :
+
+  Compléter le code afin qu''il produise le message en sortie tel
   que demandé.
 
-  '
+  ### Exemples
+
+  1. Bob
+
+   - Entrées :
+  ```
+      Bob
+  ```
+
+   - Sortie attendue :
+  ```
+      Bonjour, je m''appelle Bob !'
+  ```
 
 
