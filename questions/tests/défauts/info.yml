@@ -4,4 +4,4 @@ type: prog
   python: test
 
 tests:
-  - sortie:
+  - sortie: ""
