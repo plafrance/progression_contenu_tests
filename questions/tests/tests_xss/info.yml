@@ -1,0 +1,17 @@
+type: prog
+titre: Tests de XSS
+
+énoncé: |
+    <h1>Test</h1>
+
+    <script>alert("test");</script>
+
+rétroactions:
+    négative: <script>alert("test rétroaction");</script>
+
+ébauches:
+    test1: <script>alert("test ébauche");</script>
+
+tests:
+    - entrée: <script>alert("test entrée");</script>
+      sortie: <script>alert("test sortie");</script>
