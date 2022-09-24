@@ -1,6 +1,7 @@
 type: prog
 
 titre: Test de markdown complexe
+description: Question de test avec formatage markdown complexe
 
 énoncé: |
     _Ceci est en italique_
