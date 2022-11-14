@@ -13,5 +13,6 @@ description: test de zones éditables
   simple_sans_tag_fin: !include exec_1.2.py
   double: !include exec_2.py
   complexe: !include exec_complexe.py
+  en_ligne: !include exec_en_ligne.py
 
 tests: !include tests.yml
