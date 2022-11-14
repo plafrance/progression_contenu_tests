@@ -41,10 +41,7 @@ uuid: e9bbea6d-9ab1-4b95-9f30-7bdb821b9e2b
 
     #+VISIBLE
 
-    # +TODO
-
-
-    print( "Bonjour, je m''appelle Bob !" )
+    print( +TODO"Bonjour, je m''appelle Bob !"-TODO )
 
 
 
@@ -71,14 +68,7 @@ uuid: e9bbea6d-9ab1-4b95-9f30-7bdb821b9e2b
 
     //+VISIBLE
 
-    //+TODO
-
-
-    System.out.println( "Bonjour, je m''appelle !" );
-
-
-
-    // -TODO
+    System.out.println( +TODO"Bonjour, je m''appelle !"-TODO );
 
     // -VISIBLE
 
