@@ -29,6 +29,16 @@ tests:
   sortie: 'Bonjour, je m''appelle Léon !
 
     '
+
+- entrée: 'Stéphanie
+
+    '
+  nom: 'Sortie simple : Stéphanie'
+  sortie: 'Bonjour, je m''appelle Stéphanie !
+
+    '
+  caché: true
+  
 titre: Bonjour Bob!
 type: prog
 uuid: e9bbea6d-9ab1-4b95-9f30-7bdb821b9e2b
