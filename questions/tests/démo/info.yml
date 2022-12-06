@@ -7,6 +7,7 @@ rétroactions:
   négative: vérifie comment composer une variable avec du texte dans un message, faire
     attention aux espaces ..
   positive: Bravo! tu as réussi à maitriser l'affichage d'une variable dans un message!
+  erreur: Regarde la syntaxe de concaténation de chaînes.
 tests:
 - entrée: 'Bob
 
@@ -19,6 +20,7 @@ tests:
     négative: vérifie comment composer une variable avec du texte dans un message, faire
       attention aux espaces ..
     positive: Bravo! tu as réussi à maitriser l'affichage pour Bob
+    erreur: Oups! Erreur de syntaxe?
 
 - entrée: 'Laura
 
@@ -45,6 +47,7 @@ tests:
   rétroactions:
     négative: Mmmm... ce test doit aussi fonctionner sans connaître la sortie désirée
     positive: Bravo! Ton algorithme est général.
+    erreur: Oups! Erreur de syntaxe?
   caché: true
 
 titre: Bonjour Bob!
