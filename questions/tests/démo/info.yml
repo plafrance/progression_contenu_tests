@@ -13,6 +13,7 @@ tests:
 
     '
   nom: 'Sortie simple : Bob'
+  params: "arg1"
   sortie: 'Bonjour, je m''appelle Bob !
 
     '
@@ -26,6 +27,7 @@ tests:
 
     '
   nom: 'Sortie simple : Laura'
+  params: "arg1"
   sortie: 'Bonjour, je m''appelle Laura !
 
     '
@@ -33,6 +35,7 @@ tests:
 
     '
   nom: 'Sortie simple : Léon'
+  params: "arg1"
   sortie: 'Bonjour, je m''appelle Léon !
 
     '
@@ -41,6 +44,7 @@ tests:
 
     '
   nom: 'Sortie simple : Stéphanie'
+  params: "arg1"
   sortie: 'Bonjour, je m''appelle Stéphanie !
 
     '
