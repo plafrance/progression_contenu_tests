@@ -7,4 +7,5 @@ utilisateur: root
 
 tests:
   - nom: test 1
-    validation: '[ "$(whoami)" == "root" ]'
+    validation: "whoami"
+    sortie: "root"
