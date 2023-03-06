@@ -1,0 +1,10 @@
+type: sys
+
+titre: Question système minimale
+
+image: ubuntu
+utilisateur: root
+
+tests:
+  - nom: test 1
+    validation: '[ "$(whoami)" == "root" ]'
