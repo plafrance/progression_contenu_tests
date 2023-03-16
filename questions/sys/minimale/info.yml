@@ -6,6 +6,9 @@ image: tty-share
 utilisateur: root
 
 tests:
-  - nom: test 1
+  - nom: test whoami
     validation: "whoami"
     sortie: "root"
+  - nom: test uname
+    validation: "uname"
+    sortie: "Linux"    
