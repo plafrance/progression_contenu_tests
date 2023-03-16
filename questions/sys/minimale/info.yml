@@ -2,7 +2,7 @@ type: sys
 
 titre: Question système minimale
 
-image: ubuntu
+image: tty-share
 utilisateur: root
 
 tests:
