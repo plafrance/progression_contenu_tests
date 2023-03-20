@@ -1,0 +1,18 @@
+type: sys
+
+titre: Question système minimale
+
+image: tty-share
+utilisateur: root
+
+tests:
+  - nom: test vrai
+    validation: "true"
+    sortie: ""
+  - nom: test faux
+    validation: "false"
+    sortie: ""    
+  - nom: test erreur
+    validation: "zzzzz"
+    sortie: ""    
+
